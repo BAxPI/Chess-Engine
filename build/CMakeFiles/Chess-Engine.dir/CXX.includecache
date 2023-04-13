@@ -6,13 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp
-board.h
 /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.h
-iostream
+stdint.h
 -
 
+/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp
+board.h
 /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.h
+leapers_attack.h
+/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.h
+
+/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.h
 stdint.h
 -
 
@@ -21,4 +25,6 @@ iostream
 -
 board.h
 /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.h
+leapers_attack.h
+/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.h
 

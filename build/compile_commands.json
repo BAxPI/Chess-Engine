@@ -8,5 +8,10 @@
   "directory": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build",
   "command": "/usr/bin/g++    -g   -o CMakeFiles/Chess-Engine.dir/board.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp",
   "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp"
+},
+{
+  "directory": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp",
+  "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp"
 }
 ]

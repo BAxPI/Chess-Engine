@@ -547,6 +547,33 @@ board.cpp.s:
 	$(MAKE) -f CMakeFiles/Chess-Engine.dir/build.make CMakeFiles/Chess-Engine.dir/board.cpp.s
 .PHONY : board.cpp.s
 
+leapers_attack.o: leapers_attack.cpp.o
+
+.PHONY : leapers_attack.o
+
+# target to build an object file
+leapers_attack.cpp.o:
+	$(MAKE) -f CMakeFiles/Chess-Engine.dir/build.make CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o
+.PHONY : leapers_attack.cpp.o
+
+leapers_attack.i: leapers_attack.cpp.i
+
+.PHONY : leapers_attack.i
+
+# target to preprocess a source file
+leapers_attack.cpp.i:
+	$(MAKE) -f CMakeFiles/Chess-Engine.dir/build.make CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.i
+.PHONY : leapers_attack.cpp.i
+
+leapers_attack.s: leapers_attack.cpp.s
+
+.PHONY : leapers_attack.s
+
+# target to generate assembly for a file
+leapers_attack.cpp.s:
+	$(MAKE) -f CMakeFiles/Chess-Engine.dir/build.make CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.s
+.PHONY : leapers_attack.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -617,6 +644,9 @@ help:
 	@echo "... board.o"
 	@echo "... board.i"
 	@echo "... board.s"
+	@echo "... leapers_attack.o"
+	@echo "... leapers_attack.i"
+	@echo "... leapers_attack.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

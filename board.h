@@ -1,7 +1,12 @@
+#pragma once 
 #ifndef BOARD_H
 #define BOARD_H
 
 #include <stdint.h>
+
+#define get_bit(bit_board, square) (bit_board & (1ULL << square))
+#define set_bit(bit_board, square) (bit_board |= (1ULL << square))
+#define clear_bit(bit_board, square) (bit_board &= ~(1ULL << square))
 
 enum squares {
     a8 = 0, b8, c8, d8, e8, f8, g8, h8,
@@ -14,17 +19,6 @@ enum squares {
     a1, b1, c1, d1, e1, f1, g1, h1
 };
 
-
-class Board {
-    public: 
-        uint64_t bit_board = 0x0; 
-
-        void print_board(uint64_t bit_board);
-        bool get_square(int square);
-        void set_square(squares square);
-        void clear_square(squares square);
-
-
-};
+void print_board(uint64_t bit_board);
 
 #endif

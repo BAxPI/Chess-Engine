@@ -4,6 +4,11 @@
 CMakeFiles/Chess-Engine.dir/board.cpp.o
  /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp
  /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.h
+CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o
+ /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.h
+ /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp
+ /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.h
 CMakeFiles/Chess-Engine.dir/main.cpp.o
  /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.h
+ /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.h
  /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/main.cpp

@@ -858,12 +858,12 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 CMakeFiles/Chess-Engine.dir/all:
 	$(MAKE) -f CMakeFiles/Chess-Engine.dir/build.make CMakeFiles/Chess-Engine.dir/depend
 	$(MAKE) -f CMakeFiles/Chess-Engine.dir/build.make CMakeFiles/Chess-Engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles --progress-num=1,2,3 "Built target Chess-Engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles --progress-num=1,2,3,4 "Built target Chess-Engine"
 .PHONY : CMakeFiles/Chess-Engine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Chess-Engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Chess-Engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles 0
 .PHONY : CMakeFiles/Chess-Engine.dir/rule

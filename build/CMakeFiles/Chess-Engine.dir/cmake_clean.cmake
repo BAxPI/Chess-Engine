@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Chess-Engine.dir/board.cpp.o"
+  "CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o"
   "CMakeFiles/Chess-Engine.dir/main.cpp.o"
   "Chess-Engine"
   "Chess-Engine.pdb"

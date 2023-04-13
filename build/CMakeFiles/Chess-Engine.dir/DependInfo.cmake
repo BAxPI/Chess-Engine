@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp" "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles/Chess-Engine.dir/board.cpp.o"
+  "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp" "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o"
   "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/main.cpp" "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build/CMakeFiles/Chess-Engine.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
