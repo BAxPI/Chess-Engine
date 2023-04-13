@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/Chess-Engine.dir/main.cpp.o CMakeFiles/Chess-Engine.dir/board.cpp.o  -o Chess-Engine 
