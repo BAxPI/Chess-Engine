@@ -1,5 +1,6 @@
 #include "board.h"
 #include <iostream>
+#include <array>
 
 
 void print_board(uint64_t bit_board){
@@ -16,4 +17,22 @@ void print_board(uint64_t bit_board){
     std::cout << "   a b c d e f g h" << std::endl;
 
     printf("\n     Bitboard: %lud\n\n", bit_board);
+}
+
+
+int count_bits(uint64_t bitboard){
+    int counter = 0;
+    while(bitboard){
+        counter++;
+        bitboard &= bitboard - 1;
+    }
+    return counter;
+}
+
+
+int get_lsb_index(uint64_t bitboard){
+    if (!bitboard) 
+        return -1;
+    else 
+        return count_bits((bitboard & -bitboard) -1);
 }
