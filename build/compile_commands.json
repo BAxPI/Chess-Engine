@@ -1,25 +1,25 @@
 [
 {
   "directory": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Chess-Engine.dir/main.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/main.cpp",
+  "command": "/usr/bin/g++     -std=c++17 -g   -o CMakeFiles/Chess-Engine.dir/main.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/main.cpp",
   "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/main.cpp"
 },
 
 {
   "directory": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Chess-Engine.dir/board.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp",
+  "command": "/usr/bin/g++     -std=c++17 -g   -o CMakeFiles/Chess-Engine.dir/board.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp",
   "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/board.cpp"
 },
 
 {
   "directory": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp",
-  "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/leapers_attack.cpp"
+  "command": "/usr/bin/g++     -std=c++17 -g   -o CMakeFiles/Chess-Engine.dir/attacks.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/attacks.cpp",
+  "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/attacks.cpp"
 },
 
 {
   "directory": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Chess-Engine.dir/sliders_attack.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/sliders_attack.cpp",
-  "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/sliders_attack.cpp"
+  "command": "/usr/bin/g++     -std=c++17 -g   -o CMakeFiles/Chess-Engine.dir/xorshift_random.cpp.o -c /home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/xorshift_random.cpp",
+  "file": "/home/baramber/Desktop/Portfolio/CPP/chess/Chess-Engine/xorshift_random.cpp"
 }
 ]

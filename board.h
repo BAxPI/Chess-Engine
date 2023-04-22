@@ -1,9 +1,14 @@
-#pragma once 
-#ifndef BOARD_H
-#define BOARD_H
+#ifndef __BOARD__H_
+#define __BOARD__H_
 
 #include <stdint.h>
 #include <array>
+#include <string_view>
+
+
+enum Color{White, Black};
+enum Sliders {rook, bishop};
+
 /* Bit manipulations */
 #define get_bit(bit_board, square) (bit_board & (1ULL << square))
 #define set_bit(bit_board, square) (bit_board |= (1ULL << square))
@@ -23,7 +28,7 @@ enum squares {
     a1, b1, c1, d1, e1, f1, g1, h1
 };
 
-const std::array<std::string, 64> index_to_square = {
+constexpr std::array<std::string_view, 64> index_to_square = {
     "a8" , "b8", "c8", "d8", "e8", "f8", "g8", "h8",
     "a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7",
     "a6", "b6", "c6", "d6", "e6", "f6", "g6", "h6",
@@ -33,6 +38,12 @@ const std::array<std::string, 64> index_to_square = {
     "a2", "b2", "c2", "d2", "e2", "f2", "g2", "h2",
     "a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1"
 };
+
+// Constants masking the A, H, GH and AB files.
+constexpr uint64_t NOT_FILE_A = 18374403900871474942UL; 
+constexpr uint64_t NOT_FILE_H = 9187201950435737471UL;
+constexpr uint64_t NOT_FILE_GH = 4557430888798830399UL;
+constexpr uint64_t NOT_FILE_AB = 18229723555195321596UL;
 
 
 void print_board(uint64_t bit_board);

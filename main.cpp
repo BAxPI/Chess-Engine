@@ -1,26 +1,38 @@
 #include <iostream>
 #include "board.h"
-#include "leapers_attack.h"
-#include "sliders_attack.h"
+#include "attacks.h"
+#include <unistd.h>
+void init_all(){
+    init_pawn_attack();
+    init_knight_attack();
+    init_king_attack();
+
+    // Sliding pieces: rook, bishop.
+    init_magic_number();
+    init_sliders_attack(Sliders::rook);
+    init_sliders_attack(Sliders::bishop);
+}
 
 
 int main(int, char**) {
+    std::cout << "Initiating..." << std::endl;
+    init_all();
+    std::cout << "Initiation completed." << std::endl;
+    sleep(2);
+    std::cout<< "READY? GO!" << std::endl;
     uint64_t bit_board = 0ULL; 
-    set_bit(bit_board, c1); 
-    // print_board(bit_board);
+    set_bit(bit_board, e7); 
+    set_bit(bit_board, e3); 
+    set_bit(bit_board, b5); 
+    set_bit(bit_board, f5); 
+    set_bit(bit_board, f6); 
+    set_bit(bit_board, c7); 
+    set_bit(bit_board, b2); 
+    set_bit(bit_board, f4); 
+    print_board(bit_board);
 
-    // print_board(mask_bishop_occupancy(e3));
-    // std::cout<<count_bits((mask_bishop_occupancy(f1)))<< std::endl;
-
-    for(int rank = 0; rank < 8; rank++){
-        for (int file = 0; file < 8; file++){
-            uint64_t square = rank * 8 + file;
-            printf("%d, ", count_bits(mask_rook_occupancy(square)));
-        }
-        printf("\n");
-    }
-
-
+    print_board(get_rook_attack(e5, bit_board));
+    print_board(get_bishop_attack(e5, bit_board));   
 } 
 
 

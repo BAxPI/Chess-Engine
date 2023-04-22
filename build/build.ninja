@@ -267,25 +267,25 @@ build cmake_object_order_depends_target_Chess-Engine: phony || CMakeFiles/Chess-
 
 build CMakeFiles/Chess-Engine.dir/main.cpp.o: CXX_COMPILER__Chess-Engine ../main.cpp || cmake_object_order_depends_target_Chess-Engine
   DEP_FILE = CMakeFiles/Chess-Engine.dir/main.cpp.o.d
-  FLAGS = -g
+  FLAGS = -std=c++17 -g
   OBJECT_DIR = CMakeFiles/Chess-Engine.dir
   OBJECT_FILE_DIR = CMakeFiles/Chess-Engine.dir
 
 build CMakeFiles/Chess-Engine.dir/board.cpp.o: CXX_COMPILER__Chess-Engine ../board.cpp || cmake_object_order_depends_target_Chess-Engine
   DEP_FILE = CMakeFiles/Chess-Engine.dir/board.cpp.o.d
-  FLAGS = -g
+  FLAGS = -std=c++17 -g
   OBJECT_DIR = CMakeFiles/Chess-Engine.dir
   OBJECT_FILE_DIR = CMakeFiles/Chess-Engine.dir
 
-build CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o: CXX_COMPILER__Chess-Engine ../leapers_attack.cpp || cmake_object_order_depends_target_Chess-Engine
-  DEP_FILE = CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o.d
-  FLAGS = -g
+build CMakeFiles/Chess-Engine.dir/attacks.cpp.o: CXX_COMPILER__Chess-Engine ../attacks.cpp || cmake_object_order_depends_target_Chess-Engine
+  DEP_FILE = CMakeFiles/Chess-Engine.dir/attacks.cpp.o.d
+  FLAGS = -std=c++17 -g
   OBJECT_DIR = CMakeFiles/Chess-Engine.dir
   OBJECT_FILE_DIR = CMakeFiles/Chess-Engine.dir
 
-build CMakeFiles/Chess-Engine.dir/sliders_attack.cpp.o: CXX_COMPILER__Chess-Engine ../sliders_attack.cpp || cmake_object_order_depends_target_Chess-Engine
-  DEP_FILE = CMakeFiles/Chess-Engine.dir/sliders_attack.cpp.o.d
-  FLAGS = -g
+build CMakeFiles/Chess-Engine.dir/xorshift_random.cpp.o: CXX_COMPILER__Chess-Engine ../xorshift_random.cpp || cmake_object_order_depends_target_Chess-Engine
+  DEP_FILE = CMakeFiles/Chess-Engine.dir/xorshift_random.cpp.o.d
+  FLAGS = -std=c++17 -g
   OBJECT_DIR = CMakeFiles/Chess-Engine.dir
   OBJECT_FILE_DIR = CMakeFiles/Chess-Engine.dir
 
@@ -297,8 +297,8 @@ build CMakeFiles/Chess-Engine.dir/sliders_attack.cpp.o: CXX_COMPILER__Chess-Engi
 #############################################
 # Link the executable Chess-Engine
 
-build Chess-Engine: CXX_EXECUTABLE_LINKER__Chess-Engine CMakeFiles/Chess-Engine.dir/main.cpp.o CMakeFiles/Chess-Engine.dir/board.cpp.o CMakeFiles/Chess-Engine.dir/leapers_attack.cpp.o CMakeFiles/Chess-Engine.dir/sliders_attack.cpp.o
-  FLAGS = -g
+build Chess-Engine: CXX_EXECUTABLE_LINKER__Chess-Engine CMakeFiles/Chess-Engine.dir/main.cpp.o CMakeFiles/Chess-Engine.dir/board.cpp.o CMakeFiles/Chess-Engine.dir/attacks.cpp.o CMakeFiles/Chess-Engine.dir/xorshift_random.cpp.o
+  FLAGS = -std=c++17 -g
   LINK_FLAGS = -rdynamic
   OBJECT_DIR = CMakeFiles/Chess-Engine.dir
   POST_BUILD = :
