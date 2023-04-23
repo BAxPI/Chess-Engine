@@ -1,7 +1,8 @@
 #include <iostream>
 #include "board.h"
-#include "xorshift_random.h"
-
+#include "xorshift_random.h" //XOR32SHIFT Algorithm to create a pseudo random number
+#include <istream>
+#include <fstream>
 
 /****** LEAPING PIECES ATTACKS ******/
 
@@ -9,6 +10,7 @@
 static std::array<std::array<uint64_t, 64>, 2> pawn_attack; 
 static std::array<uint64_t, 64> knight_attack;
 static std::array<uint64_t, 64> king_attack;
+
 
 static uint64_t get_pawn_attack_mask(Color color, int square){
     uint64_t attack = 0;
@@ -31,9 +33,11 @@ void init_pawn_attack(){
    }
 }
 
+
 uint64_t get_pawn_attack(Color color, int square){
     return pawn_attack[color][square];
 }
+
 
 static uint64_t get_knight_attack_mask(int square){
     uint64_t attack = 0UL;
@@ -51,15 +55,18 @@ static uint64_t get_knight_attack_mask(int square){
     return attack;
 }    
 
+
 void init_knight_attack(){
    for(int i = 0; i < 64; i++){
        knight_attack[i] = get_knight_attack_mask(i);
    }
 }
 
+
 uint64_t get_knight_attack(int square){
     return knight_attack[square];
 }
+
 
 static uint64_t get_king_attack_mask(int square){
     uint64_t attack = 0UL;
@@ -75,11 +82,13 @@ static uint64_t get_king_attack_mask(int square){
     return attack;
 }
 
+
 void init_king_attack(){
     for (int i = 0; i < 64; i++){
         king_attack[i] = get_king_attack_mask(i);
     }
 }
+
 
 uint64_t get_king_attack(int square){
     return king_attack[square];
@@ -128,9 +137,10 @@ const std::array<int, 64> rook_relevant_bits = {
 
 static uint64_t mask_bishop_occupancy(int square){
     uint64_t occupancy = 0;
-    
+
     int t_file = square % 8;
     int t_rank = square / 8;
+
     for(int f = t_file + 1, r = t_rank + 1; f <=6 && r<=6; f++, r++) occupancy |= (1ULL << (r * 8 + f)); 
     for(int f = t_file + 1, r = t_rank - 1; f <=6 && r>=1; f++, r--) occupancy |= (1ULL << (r * 8 + f)); 
     for(int f = t_file - 1, r = t_rank + 1; f >=1 && r<=6; f--, r++) occupancy |= (1ULL << (r * 8 + f)); 
@@ -142,9 +152,10 @@ static uint64_t mask_bishop_occupancy(int square){
 
 static uint64_t get_bishop_attack_on_the_fly(int square, uint64_t block){
     uint64_t attacks = 0;
-    
+
     int t_file = square % 8;
     int t_rank = square / 8;
+
     for(int f = t_file + 1, r = t_rank + 1; f <=7 && r<=7; f++, r++){
         attacks |= (1ULL << (r * 8 + f));  
         if(((1ULL << (r * 8 + f)) & block)){
@@ -237,6 +248,7 @@ uint64_t generate_magic_number(){
     return get_random_U64_number() & get_random_U64_number() & get_random_U64_number();
 }
 
+
 uint64_t find_magic_number(int square, int relevant_bits, Sliders slider){
     std::array<uint64_t, 4096> occupancies;
     std::array<uint64_t, 4096> attacks;
@@ -273,13 +285,41 @@ uint64_t find_magic_number(int square, int relevant_bits, Sliders slider){
     return 0ULL;
 }
 
-void init_magic_number(){
+
+void get_magic_numbers(){
+    std::ofstream file("../magic_numbers.txt"); 
     for(int square = 0; square < 64; square++){
         rook_magic_numbers[square] = find_magic_number(square, rook_relevant_bits[square], Sliders::rook);
+        file << rook_magic_numbers[square] << std::endl;
     }
     for(int square = 0; square < 64; square++){
         bishop_magic_numbers[square] = find_magic_number(square, bishop_relevant_bits[square], Sliders::bishop);
+        file << bishop_magic_numbers[square] << std::endl;
     }
+}
+
+
+void init_magic_numbers(){
+    std::ifstream file("../magic_numbers.txt");
+    if (!file.is_open()) {
+        get_magic_numbers();
+        return;
+    }
+    std::string line;
+    for(int i=0; i<64; i++){
+        if(std::getline(file, line)) {
+            bishop_magic_numbers[i] = std::stoull(line);
+            std::cout<<std::hex<<bishop_magic_numbers[i] << std::endl;
+        }
+    }
+    for(int i=0; i<64; i++){
+        if (std::getline(file, line)) {
+            rook_magic_numbers[i] = std::stoull(line);
+            std::cout<<std::hex<<rook_magic_numbers[i] << std::endl;
+        }
+    }
+    
+    file.close();
 }
 
 
@@ -313,7 +353,7 @@ void init_sliders_attack(Sliders slider){
     }
 }
 
-// TODO: Create Magic class.
+
 uint64_t get_bishop_attack(int square, uint64_t block){
     block &= bishop_masks[square];
     block *= bishop_magic_numbers[square];
@@ -321,6 +361,7 @@ uint64_t get_bishop_attack(int square, uint64_t block){
 
     return bishop_attacks[square][block];
 }
+
 
 uint64_t get_rook_attack(int square, uint64_t block){
     block &= rook_masks[square];

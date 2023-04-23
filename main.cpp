@@ -8,7 +8,8 @@ void init_all(){
     init_king_attack();
 
     // Sliding pieces: rook, bishop.
-    init_magic_number();
+    init_magic_numbers();
+    // get_magic_numbers();
     init_sliders_attack(Sliders::rook);
     init_sliders_attack(Sliders::bishop);
 }
@@ -18,8 +19,6 @@ int main(int, char**) {
     std::cout << "Initiating..." << std::endl;
     init_all();
     std::cout << "Initiation completed." << std::endl;
-    sleep(2);
-    std::cout<< "READY? GO!" << std::endl;
     uint64_t bit_board = 0ULL; 
     set_bit(bit_board, e7); 
     set_bit(bit_board, e3); 
@@ -31,8 +30,8 @@ int main(int, char**) {
     set_bit(bit_board, f4); 
     print_board(bit_board);
 
-    print_board(get_rook_attack(e5, bit_board));
-    print_board(get_bishop_attack(e5, bit_board));   
+    print_board(get_rook_attack(h8, bit_board));
+    print_board(get_bishop_attack(a1, bit_board));   
 } 
 
 

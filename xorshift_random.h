@@ -3,6 +3,9 @@
 
 #include <stdint.h>
 
+
+// Generates a pseudo random 64bit unsigned integer.
 uint64_t get_random_U64_number();
+
 
 #endif
