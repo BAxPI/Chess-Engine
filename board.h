@@ -40,25 +40,6 @@ constexpr std::array<std::string_view, 64> index_to_square = {
     "a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1"
 };
 
-class Bitboards{
-    public:
-        enum Castling {WKS = 1, WQS = 2, BKS = 4, BQS = 8};
-        enum Pieces {P, N, B, R, Q, K, p, n, b, r, q, k};
-        
-        static constexpr std::string_view ascii_pieces{"PNBRQKpnbrqk"};
-        std::array<uint64_t, 12> bitboards{}; // Need to move to private after having the functions to handle bits
-        std::array<uint64_t, 3> occ_bitboards{}; // TODO: move to private
-        int en_passant_sq = no_sq;
-        int castle;
-        int side = Color::White;
-
-        Bitboards();
-        void print_board();
-    private:
-        std::string starting_pos{"rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w - - 0 1"};
-        int piece_to_int(char);
-        void parse_fen(std::string); 
-};
 
 // Constants masking the A, H, GH and AB files.
 constexpr uint64_t NOT_FILE_A = 18374403900871474942UL; 

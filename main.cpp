@@ -1,5 +1,6 @@
 #include <iostream>
 #include "board.h"
+#include "Bitboards.h"
 #include "attacks.h"
 #include <unistd.h>
 
@@ -20,6 +21,8 @@ int main(int, char**) {
     init_all();
     std::cout << "Initiation completed." << std::endl;
 
+    Bitboards bb;
+    bb.print_board(); 
     return 0;
 } 
 
