@@ -13,7 +13,8 @@ For any suggestion, correction or improvement feel free to send me a message, BA
 
 
 ## Project Structure (modules) 
-1. <code>attacks.cpp</code> - Contains methods related to generating and pre-calculating piece's attacks. 
-2. <code>board.cpp</code> - Contains Bitboards class, handling the usage and manipulation of bitbooards. 
-3. <code>xorshift_random</code> - Contains methods to generate a pseudo-random 64-bit random number, using XOR32SHIFT algorithm. 
+1. `attacks.cpp` - Contains methods related to generating and pre-calculating piece's attacks. 
+2. `board.cpp` -  Contains methods for handling the usage and manipulation of bitbooards. 
+3. `Bitboards.cpp` - Contains Bitboards class, that represents an in-game chess board using the bitboard technique. 
+4. `xorshift_random` - Contains methods to generate a pseudo-random 64-bit random number, using XOR32SHIFT algorithm. 
 
