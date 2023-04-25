@@ -307,15 +307,13 @@ void init_magic_numbers(){
     }
     std::string line;
     for(int i=0; i<64; i++){
-        if(std::getline(file, line)) {
-            bishop_magic_numbers[i] = std::stoull(line);
-            std::cout<<std::hex<<bishop_magic_numbers[i] << std::endl;
+        if (std::getline(file, line)) {
+            rook_magic_numbers[i] = std::stoull(line);
         }
     }
     for(int i=0; i<64; i++){
-        if (std::getline(file, line)) {
-            rook_magic_numbers[i] = std::stoull(line);
-            std::cout<<std::hex<<rook_magic_numbers[i] << std::endl;
+        if(std::getline(file, line)) {
+            bishop_magic_numbers[i] = std::stoull(line);
         }
     }
     
@@ -371,3 +369,9 @@ uint64_t get_rook_attack(int square, uint64_t block){
     return rook_attacks[square][block];
 }
 
+uint64_t get_queen_attack(int square ,uint64_t block){
+    uint64_t queen_att = 0ULL;
+    queen_att |= get_bishop_attack(square, block);
+    queen_att |= get_rook_attack(square, block);
+    return queen_att;
+}

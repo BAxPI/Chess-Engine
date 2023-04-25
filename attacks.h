@@ -22,8 +22,9 @@ uint64_t get_knight_attack(int square);
 uint64_t get_king_attack(int square);
 uint64_t get_bishop_attack(int square, uint64_t block);
 uint64_t get_rook_attack(int square, uint64_t block);
-
+uint64_t get_queen_attack(int square, uint64_t block);
 
 // TESTS
-
+// uint64_t get_bishop_attack_on_the_fly(int square, uint64_t block);
+// uint64_t get_bishop_attack(int square, uint64_t block);
 #endif
